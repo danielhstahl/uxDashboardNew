@@ -40,12 +40,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
 
     <script>
+
       $(window).scroll(function() {
+        //var objectSelect = $("#change-me");
+        var jumbVid=$(".jumbo-vid");
           var scroll = $(window).scrollTop();
-          var objectSelect = $("#change-me");
-          var objectPosition = objectSelect.offset().top;
-          var jumbVid=$(".jumbo-vid");
-          if (scroll > objectPosition) {
+          console.log(scroll);
+          //var objectPosition = objectSelect.offset().top;
+          if (scroll >= 20) {
               jumbVid.removeClass("col-lg-12");
               jumbVid.addClass("col-lg-3 jumbo-vid-change");
           } else {
@@ -68,8 +70,7 @@
         </div>
     </nav>
 
-    <div class='blank-space'>
-    </div>
+
 
     <div class="card card-inverse remove-border col-lg-12 jumbo-vid">
       <div class="embed-responsive embed-responsive-16by9 card-img">
@@ -78,6 +79,10 @@
     </div>
     <div id="change-me"></div>
     <a name="mrm"></a>
+    <div class='blank-space'>
+    </div>
+    <div class='blank-space'>
+    </div>
     <div class='blank-space'>
     </div>
     <div class="container">

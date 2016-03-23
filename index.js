@@ -5,7 +5,7 @@ var http=require('http');
 var express = require('express');
 
 var app = express();
-var server = http.createServer(app).listen(8500); //required fro socket.io
+var server = http.createServer(app).listen(80); //required fro socket.io
 var io = require('socket.io').listen(server);
 
 app.use(express.static('assets'));
